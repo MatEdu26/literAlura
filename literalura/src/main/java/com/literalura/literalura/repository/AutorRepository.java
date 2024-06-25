@@ -11,7 +11,7 @@ import java.util.List;
 public interface AutorRepository extends JpaRepository<Autor,Long>  {
     Autor findByNombre(String nombre);
 
-    @Query("SELECT a FROM Autor a WHERE a.fechaNacimiento <= :año AND a.fechaDefuncion >= :año")
-    List<Autor> autoresVivosEnDeterminadoAño (int año);
+    @Query("SELECT a FROM Autor a WHERE a.fechaNacimiento <= :ano AND a.fechaDefuncion >= :ano")
+    List<Autor> autoresVivosEnDeterminadoAno (int ano);
 
 }
